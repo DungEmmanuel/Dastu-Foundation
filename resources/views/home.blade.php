@@ -99,7 +99,7 @@
          </p>
         </div>
         <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" src="images/babe5.jpg" alt="Generic placeholder image">
+          <img class="featurette-image img-responsive center-block" src="" alt="Generic placeholder image">
         </div>
       </div>
 
