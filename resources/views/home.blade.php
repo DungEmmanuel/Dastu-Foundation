@@ -63,7 +63,7 @@
           
         </div>
         <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" src="images/babe6.jpg" alt="Generic placeholder image">
+          <img class="featurette-image img-responsive center-block" src="images/activities4.jpg" alt="Generic placeholder image">
         </div>
       </div>
 
@@ -84,7 +84,7 @@
 
         </div>
         <div class="col-md-5 col-md-pull-7">
-          <img class="featurette-image img-responsive center-block" src="images/babe8.jpg" alt="Generic placeholder image">
+          <img class="featurette-image img-responsive center-block" src="images/objectives2.jpg" alt="Generic placeholder image">
         </div>
       </div>
 
@@ -99,7 +99,7 @@
          </p>
         </div>
         <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" src="" alt="Generic placeholder image">
+          <img class="featurette-image img-responsive center-block" src="images/justification1.jpg" alt="Generic placeholder image">
         </div>
       </div>
 
