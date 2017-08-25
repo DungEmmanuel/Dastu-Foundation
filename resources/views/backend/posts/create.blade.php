@@ -9,7 +9,8 @@
            </div>
    <div class="container col-md-8 col-md-offset-2">
      <div class="well well bs-component">
-          <form class="form-horizontal" method="post">
+          <form class="form-horizontal" method="post" enctype="multipart/form-data">
+               <input type="hidden" name="_token" value="{!! csrf_token() !!}">
                 @foreach ($errors->all() as $error)
                       <p class="alert alert-danger">{{ $error }}</p>
                 @endforeach
@@ -18,7 +19,7 @@
                           {{ session('status') }}
                     </div>
                 @endif
-                <input type="hidden" name="_token" value="{!! csrf_token() !!}">
+               
                 <fieldset>
                          <legend>Create a new post</legend> 
                                  <div class="form-group">
@@ -28,6 +29,21 @@
                                            <input type="text" class="form-control" id="title" placeholder="Title" name="title">
                                       </div>
                                   </div>
+                                 
+                                 <div class="form-group">
+                                       <label for="content" class="col-lg-2 control-label">Image Upload</label>
+                                       <div class="col-lg-10">
+
+                                                     <input type="file" name="images[]"  class="form-control" multiple>
+                                                     </br>
+
+                                                    <!-- <button type="submit" class="btn btn-success">Upload</button> -->
+
+                                        </div>
+                                  </div>
+
+
+
 
                                   <div class="form-group">
                                        <label for="content" class="col-lg-2 control-label">Content</label>
@@ -35,6 +51,9 @@
                                             <textarea class="form-control" rows="3" id="content" name="content"></textarea>
                                        </div>
                                   </div>
+
+
+
                                   <div class="form-group">
                                        <label for="categories" class="col-lg-2 control-label">Categories</label>
                                        <div class="col-lg-10">

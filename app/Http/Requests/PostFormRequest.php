@@ -23,10 +23,20 @@ class PostFormRequest extends Request
      */
     public function rules()
     {
-        return [
+        $rules= [
         'title' => 'required',
         'content'=> 'required',
         'categories' => 'required',
        ];    
+
+
+        $ncnt = count($this->input('images'));
+        foreach(range(0, $ncnt) as $index) 
+        {
+            $rules['images.'.$index] = 'sometimes|image|mimes:jpeg,png,jpg,gif,svg|max:2048';
+        }
+       
+       return $rules;
+        
     }
 }

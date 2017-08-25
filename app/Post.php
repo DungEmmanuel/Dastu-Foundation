@@ -17,4 +17,9 @@ class Post extends Model
     {
         return $this->hasMany('App\Comment', 'post_id'); 
     }
+
+    public function image()
+    {
+    	return $this->hasMany('App\Image');
+    }
 }

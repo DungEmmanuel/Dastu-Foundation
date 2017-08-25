@@ -12,6 +12,35 @@
          <div class="well well bs-component">
               <div class="content">
                    <h2 class="header">{!! $post->title !!}</h2> 
+
+                   <div class='list-group gallery'>
+
+
+                         @if($images->count())
+
+                             @foreach($images as $image)
+
+                                @if($image->post_id == $post->id)
+
+                                   <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+
+                                      <a class="thumbnail fancybox" rel="ligthbox" href="/images/{{ $image->image }}">
+
+                                          <img class="img-responsive" alt="" src="/images/{{ $image->image }}" />
+
+
+                                       </a>
+                                   </div> <!-- col-6 / end -->
+
+                                  @endif
+
+                             @endforeach
+
+                          @endif
+                          <div class="clearfix"></div>
+
+                    </div> <!-- list-group / end -->
+
                    <p> {!! $post->content !!} </p>
               </div>
               <div class="clearfix"></div> 
@@ -23,12 +52,14 @@
                     
                      <br>
                      <br>
-                     {!! $userr->name !!}  &nbsp;  &nbsp; &nbsp; {!! $comment->created_at !!} &nbsp; &nbsp; {!! $userid !!}
+                     <!--{!! $userr->name !!}  &nbsp;  &nbsp; &nbsp; --> {!! $comment->created_at !!} &nbsp; &nbsp; {!! $userid !!}
                    </div>
                </div>
         @endforeach
         <div class="well well bs-component">
         <form class="form-horizontal" method="post" action="/comment">
+              <input type="hidden" name="_token" value="{!! csrf_token() !!}"> 
+
               @foreach($errors->all() as $error)
                    <p class="alert alert-danger">{{ $error }}</p>
               @endforeach
@@ -38,7 +69,7 @@
                  </div>
               @endif
                  <input type="hidden" name="_token" value="{!! csrf_token() !!}"> 
-                 <input type="hidden" name="post_id" value="{!! $post->id !!}">
+                <input type="hidden" name="post_id" value="{!! $post->id !!}"> 
 
                  <!-- <input type="hidden" name="post_type" value="App\Post"> -->
                <fieldset>

@@ -11,8 +11,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-              </button>
+              </button> 
+            
+              <a href="#" class="navbar-brand"><img class="img-responsive2" src="images/IMG_0350.jpg" width="40" height="33" /></a>
               <a class="navbar-brand" href="#"> Dastu Foundation</a>
+
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
