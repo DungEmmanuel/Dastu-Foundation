@@ -13,13 +13,20 @@ class CreateImagesTable extends Migration
     public function up()
     {
         Schema::create('images', function(Blueprint $table){
+            $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('image');
-            $table->integer('post_id'); 
+            $table->integer('post_id')->unsigned(); 
             $table->foreign('post_id')->references('id')->on('posts');
 
             $table->timestamps();
+
         });
+
+
+        //Schema::table('images', function($table) { $table->foreign('post_id')->references('id')->on('posts'); });
+
+
     }
 
     /**
